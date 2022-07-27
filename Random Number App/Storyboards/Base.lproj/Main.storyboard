@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1794.2028985507247" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="8em-QR-UJV">
             <objects>
-                <viewController id="oUq-XS-DH0" sceneMemberID="viewController">
+                <viewController id="oUq-XS-DH0" customClass="SettingsViewController" customModule="Random_Number_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91a-ib-fXe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
