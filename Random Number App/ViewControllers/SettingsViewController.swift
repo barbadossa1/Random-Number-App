@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet var minValue: UITextField!
     @IBOutlet var maxValue: UITextField!
     
-   
+    
     @IBAction func cancelBtnPressed() {
         dismiss(animated: true)
     }

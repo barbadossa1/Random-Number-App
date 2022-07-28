@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         maxNumber.text = String(randomNumberModel.maxNumber)
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let settingsVC = segue.destination as? SettingsViewController else {
+            return
+        }
+        settingsVC.minValue.text = minNumber.text
+        settingsVC.maxValue.text = minNumber.text
+    }
 
 }
 
