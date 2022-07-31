@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fJR-aN-PGx">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Random_Number_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-SQ-O9x">
-                                <rect key="frame" x="77" y="253.5" width="260.5" height="389.5"/>
+                                <rect key="frame" x="30" y="89.5" width="260.5" height="389.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="ioK-QM-kfv">
                                         <rect key="frame" x="0.0" y="0.0" width="260.5" height="44.5"/>
@@ -80,12 +80,11 @@
                     <navigationItem key="navigationItem" title="Random Number" id="Vbs-yv-UXf">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Hgf-2Z-qc6">
                             <connections>
-                                <segue destination="l6J-xA-XOl" kind="presentation" id="q8O-Du-B8Q"/>
+                                <segue destination="oUq-XS-DH0" kind="presentation" id="WHB-Z2-VYB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="getResultBtn" destination="Ge1-eh-YDP" id="f5t-c2-XwH"/>
                         <outlet property="maxNumber" destination="bm8-OO-h9Y" id="W30-4f-0i8"/>
                         <outlet property="minNumber" destination="EEs-dg-J8K" id="3X3-dM-8gu"/>
                         <outlet property="randomNumber" destination="wre-kn-vLf" id="WZ4-qP-Co3"/>
@@ -95,33 +94,54 @@
             </objects>
             <point key="canvasLocation" x="1764" y="80"/>
         </scene>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="8em-QR-UJV">
             <objects>
                 <viewController id="oUq-XS-DH0" customClass="SettingsViewController" customModule="Random_Number_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91a-ib-fXe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AUw-hL-WbK">
-                                <rect key="frame" x="40" y="208" width="334" height="148.5"/>
+                                <rect key="frame" x="40" y="70" width="240" height="225.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set minimum and maximum values" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWo-WU-DNc">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-hS-PSW">
-                                        <rect key="frame" x="0.0" y="50.5" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YeG-9J-ER9">
-                                        <rect key="frame" x="0.0" y="114.5" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="114.5" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-Je-qNc">
+                                        <rect key="frame" x="0.0" y="178.5" width="240" height="47"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If6-zq-vb4">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="47"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Cancel" buttonSize="large"/>
+                                                <connections>
+                                                    <action selector="cancelBtnPressed" destination="oUq-XS-DH0" eventType="touchUpInside" id="Zka-Ca-Unb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQQ-WT-8fX">
+                                                <rect key="frame" x="155" y="0.0" width="85" height="47"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Save" buttonSize="large"/>
+                                                <connections>
+                                                    <action selector="saveBtnPressed:" destination="oUq-XS-DH0" eventType="touchUpInside" id="liQ-6M-ngM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -130,18 +150,12 @@
                         <constraints>
                             <constraint firstItem="QuO-mH-WIX" firstAttribute="trailing" secondItem="AUw-hL-WbK" secondAttribute="trailing" constant="40" id="BZ7-tk-deS"/>
                             <constraint firstItem="AUw-hL-WbK" firstAttribute="centerX" secondItem="91a-ib-fXe" secondAttribute="centerX" id="DhT-Gh-czD"/>
-                            <constraint firstItem="AUw-hL-WbK" firstAttribute="top" secondItem="QuO-mH-WIX" secondAttribute="top" constant="100" id="LNM-6g-ZJ5"/>
+                            <constraint firstItem="AUw-hL-WbK" firstAttribute="top" secondItem="QuO-mH-WIX" secondAttribute="top" constant="70" id="LNM-6g-ZJ5"/>
                             <constraint firstItem="AUw-hL-WbK" firstAttribute="leading" secondItem="QuO-mH-WIX" secondAttribute="leading" constant="40" id="MuV-8k-t7H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="L2I-53-rIe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2xc-Gi-Hod">
-                            <connections>
-                                <action selector="cancelBtnPressed" destination="oUq-XS-DH0" id="GHe-4f-RQo"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RKL-aw-Spn"/>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="maxValue" destination="YeG-9J-ER9" id="7Xf-Ab-Mdc"/>
                         <outlet property="minValue" destination="sFq-hS-PSW" id="fGs-OV-seW"/>
@@ -149,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qw-pa-QoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3462" y="80"/>
+            <point key="canvasLocation" x="2594.202898550725" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eoI-v4-F6V">
@@ -157,7 +171,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fJR-aN-PGx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iBJ-2x-CZe">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -168,24 +182,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMZ-Nh-SBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="79.6875"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ywU-PN-puH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l6J-xA-XOl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wZz-PD-nXp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="oUq-XS-DH0" kind="relationship" relationship="rootViewController" id="UY9-b8-HVo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bz8-gB-n4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2622" y="80"/>
         </scene>
     </scenes>
     <resources>
