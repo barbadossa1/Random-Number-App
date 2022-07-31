@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         maxNumber.text = String(randomNumberModel.maxNumber)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let settingsVC = navigationVC.topViewController as? SettingsViewController else {return}
+    }
+    
 
 }
 
