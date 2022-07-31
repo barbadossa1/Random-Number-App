@@ -64,6 +64,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Get result" buttonSize="large"/>
+                                                <connections>
+                                                    <action selector="getResultBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4CH-96-0Ch"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -85,9 +88,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="maxNumber" destination="bm8-OO-h9Y" id="W30-4f-0i8"/>
-                        <outlet property="minNumber" destination="EEs-dg-J8K" id="3X3-dM-8gu"/>
-                        <outlet property="randomNumber" destination="wre-kn-vLf" id="WZ4-qP-Co3"/>
+                        <outlet property="maxNumberLabel" destination="bm8-OO-h9Y" id="W30-4f-0i8"/>
+                        <outlet property="minNumberLabel" destination="EEs-dg-J8K" id="3X3-dM-8gu"/>
+                        <outlet property="randomNumberLabel" destination="wre-kn-vLf" id="WZ4-qP-Co3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

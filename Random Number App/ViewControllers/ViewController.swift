@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var minNumber: UILabel!
-    @IBOutlet var maxNumber: UILabel!
-    @IBOutlet var randomNumber: UILabel!
+    @IBOutlet var minNumberLabel: UILabel!
+    @IBOutlet var maxNumberLabel: UILabel!
+    @IBOutlet var randomNumberLabel: UILabel!
     
     // init model instance
     
@@ -19,13 +19,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        minNumber.text = String(randomNumberModel.minNumber)
-        maxNumber.text = String(randomNumberModel.maxNumber)
+        minNumberLabel.text = String(randomNumberModel.minNumber)
+        maxNumberLabel.text = String(randomNumberModel.maxNumber)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
         guard let settingsVC = navigationVC.topViewController as? SettingsViewController else {return}
+        settingsVC.randomNumber = randomNumberModel
+    }
+    
+    @IBAction func getResultBtn() {
+        randomNumberLabel.text = String(randomNumberModel.getRandomNumber)
     }
     
 
