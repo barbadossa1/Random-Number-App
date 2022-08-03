@@ -7,16 +7,22 @@
 
 import UIKit
 
+protocol SettingsVCDelegate: AnyObject {
+    func setMinMaxValues()
+}
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet var minValue: UITextField!
     @IBOutlet var maxValue: UITextField!
     
-    var randomNumber: RandomNumber! 
+    var randomNumber: RandomNumber! // нафига хардкодим?
+    var delegate: SettingsViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        minValue.text = String(randomNumber.minNumber)
+        maxValue.text = String(randomNumber.maxNumber)
         
     }
     
@@ -26,7 +32,10 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func saveBtnPressed(_ sender: Any) {
+        view.endEditing(true)
+        
     }
+    
     
     
 }
