@@ -65,7 +65,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Get result" buttonSize="large"/>
                                                 <connections>
-                                                    <action selector="getResultBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4CH-96-0Ch"/>
+                                                    <action selector="getResultBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYq-ww-dz6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -83,7 +83,7 @@
                     <navigationItem key="navigationItem" title="Random Number" id="Vbs-yv-UXf">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Hgf-2Z-qc6">
                             <connections>
-                                <segue destination="oUq-XS-DH0" kind="presentation" id="WHB-Z2-VYB"/>
+                                <segue destination="oUq-XS-DH0" kind="show" id="WHB-Z2-VYB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,11 +102,11 @@
             <objects>
                 <viewController id="oUq-XS-DH0" customClass="SettingsViewController" customModule="Random_Number_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91a-ib-fXe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AUw-hL-WbK">
-                                <rect key="frame" x="40" y="70" width="334" height="225.5"/>
+                                <rect key="frame" x="40" y="210" width="334" height="225.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set minimum and maximum values" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWo-WU-DNc">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
@@ -158,6 +158,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="GrH-RN-dLY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="maxValue" destination="YeG-9J-ER9" id="7Xf-Ab-Mdc"/>

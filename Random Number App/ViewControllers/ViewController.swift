@@ -24,9 +24,9 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationVC = segue.destination as? UINavigationController else { return }
-        guard let settingsVC = navigationVC.topViewController as? SettingsViewController else {return}
-        settingsVC.randomNumber = randomNumberModel
+        guard let settingsVC = segue.destination as? SettingsViewController else {return}
+        settingsVC.delegate = self
+        
     }
     
     @IBAction func getResultBtn() {
@@ -36,3 +36,10 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: SettingsVCDelegate {
+    func setMinMaxValues(minValue: Int, maxValue: Int) {
+        randomNumberModel = RandomNumber(minNumber: minValue, maxNumber: maxValue)
+        minNumberLabel.text = String(randomNumberModel.minNumber)
+        maxNumberLabel.text = String(randomNumberModel.maxNumber)
+    }
+}
